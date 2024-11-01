@@ -5,7 +5,7 @@
         </h2>
     </x-slot> --}}
 
-    <div class="flex h-screen pt-16">
+    <div class="flex h-screen pt-16 flex-col md:flex-row p-2">
         @livewire('pos.product')
         @livewire('pos.billing')
     </div>
