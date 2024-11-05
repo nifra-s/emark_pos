@@ -16,7 +16,10 @@ class Product extends Component
     }
     public function render()
     {
-        $query = Item::join('item_categories', 'items.itmCatid', '=', 'item_categories.id')->where('itmNm', 'like', '%' . $this->search . '%');
+        $query = Item::join('item_categories', 'items.itmCatid', '=', 'item_categories.id')
+    ->where('itmNm', 'like', '%' . $this->search . '%')
+    ->select('items.*', 'item_categories.id as category_id', 'item_categories.catagory_nm');
+
 
         if (!empty($this->filter_category)) {
             $query->where('itmCatid', $this->filter_category);

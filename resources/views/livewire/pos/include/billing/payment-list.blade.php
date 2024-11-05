@@ -1,5 +1,5 @@
 <div class="h-full overflow-y-auto no-scrollbar max-w-sm mx-auto">
-    <div class="grid grid-cols-1 m-1">
+    <div class="grid grid-cols-1 m-1 pb-20">
         @for ($i = 0; $i < 50; $i++)
             <div class="flex justify-between bg-gray-100 rounded-md m-1 mx-3 px-3">
                 <div class="text-center">
